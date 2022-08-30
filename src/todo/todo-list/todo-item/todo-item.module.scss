@@ -1,0 +1,21 @@
+.root {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.done {
+    width: 5rem;
+    cursor: pointer;
+}
+
+.delete {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 5rem;
+}

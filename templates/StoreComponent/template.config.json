@@ -1,0 +1,16 @@
+{
+	"parameters": [
+        {
+			"name": "Component file name",
+			"description": "The name of the files of the react component",
+			"variable": "fileName",
+			"pattern": "[a-z0-9-]+"
+		},
+		{
+			"name": "Component name",
+			"description": "The name of the react component",
+			"variable": "name",
+			"pattern": "[a-zA-Z0-9]+"
+		}
+	]
+}

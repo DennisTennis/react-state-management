@@ -1,3 +1,7 @@
+### Special thanks
+This solution is realised with the help of Kevin.
+Check out his really nice extension which save you a lot of work: https://marketplace.visualstudio.com/items?itemName=kevin-deelen.templategenerator
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `installation`

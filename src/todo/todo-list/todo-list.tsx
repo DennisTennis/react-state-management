@@ -9,13 +9,13 @@ import { todoListStore } from './todo-list.store'
 const TodoList = () => {
     const history = useNavigate()
     const store = useStore(todoListStore)
-    
+
     useEffect(() => store.setHistory(history), [store, history])
 
     return (
         <div className={styles['root']}>
             <AddTodo addTodo={store.addTodo} />
-            <div className={styles['todo-table']}>
+            <ul className={styles['todo-table']}>
                 {store.todos.map((t, index) => (
                     <TodoItem
                         key={index}
@@ -24,7 +24,7 @@ const TodoList = () => {
                         todo={t}
                     />
                 ))}
-            </div>
+            </ul>
         </div>
     )
 }

@@ -4,18 +4,16 @@ import { useEffect } from 'react'
 export type StoreInitializer<TStore> = (() => TStore)
 
 export const useStore = <TStore>(store: StoreInitializer<TStore>): TStore => {
-    const localStore = useLocalStore(() => store())
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const anyStore = localStore as any
+    const localStore = useLocalStore<any>(() => store())
 
     useEffect(() => {
-        if (anyStore.onInitialize) {
-            const initializer = async() => await anyStore.onInitialize()
+        if (localStore.onInitialize) {
+            const initializer = async() => await localStore.onInitialize()
             initializer()
         }
 
-        return anyStore.onUnmount
-    }, [anyStore])
+        return localStore.onUnmount
+    }, [localStore])
 
     return localStore
 }

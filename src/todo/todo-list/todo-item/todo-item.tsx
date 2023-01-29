@@ -12,7 +12,7 @@ const TodoItem = (props: TodoItemProps) => {
     const { todo, updateTodo, deleteTodo } = props
 
     return (
-        <div key={todo.id} className={styles['root']}>
+        <li key={todo.id} className={styles['root']}>
             <input
                 className={styles['done']}
                 type='checkbox'
@@ -29,7 +29,7 @@ const TodoItem = (props: TodoItemProps) => {
             >
                 DELETE
             </button>
-        </div>
+        </li>
     )
 }
 
